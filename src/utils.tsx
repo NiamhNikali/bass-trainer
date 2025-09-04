@@ -25,7 +25,7 @@ export function midiToFreq(midi: number) {
 // Utility: get note name + octave
 export function midiToNoteName(midi: number) {
   const name = noteNames[midi % 12];
-  const octave = Math.floor(midi / 12);
+  const octave = Math.floor(midi / 12) - 1;
   return `${name}${octave}`;
 }
 
